@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Server;
 import org.bukkit.command.Command;
@@ -84,6 +85,15 @@ public class ALXmain extends JavaPlugin implements Listener {
 					}
 					
 					player.sendMessage("No previously saved location!");
+					return false;
+				}
+				
+				if (args[0].equalsIgnoreCase("hp")) {
+					player.sendMessage("=Currently Unable to be Implemented=");
+					player.sendMessage(":/ sorry");
+					player.sendMessage("Usage:");
+					player.sendMessage("!hp" + ChatColor.GREEN + "<health>" + ChatColor.GOLD + "[targetplayer]");
+					player.sendMessage("If no player is given, default to self");
 					return false;
 				}
 			}
