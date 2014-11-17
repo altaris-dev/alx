@@ -45,10 +45,69 @@ public class ALXmain extends JavaPlugin implements Listener {
 		this.getConfig().options().copyDefaults(true);
 		this.replacements = (List<String>)this.getConfig().getStringList("replacements");
 		if (this.replacements.isEmpty()) {
+			// Help and Menu Commands
+			this.replacements.add("!help ;/alx help ");
+			this.replacements.add("!menu ;/alx menu ");
+			// Teleportation Commands
 			this.replacements.add("!goto ;/alx goto ");
 			this.replacements.add("!bring ;/alx bring ");
 			this.replacements.add("!return ;/alx return ");
-			this.replacements.add("!help ;/alx help ");
+			this.replacements.add("!send ;/alx send ");
+			this.replacements.add("!tpa ;/alx tpa ");
+			// "Fun" Commands
+			this.replacements.add("!armor ;alx armor ");
+			this.replacements.add("!blind ;/alx blind ");
+			this.replacements.add("!cloak ;/alx cloak ");
+			this.replacements.add("!freeze ;/alx freeze ");
+			this.replacements.add("!strip ;/alx strip ");
+			// Health Related Commands
+			this.replacements.add("!hp ;/alx hp ");
+			this.replacements.add("!god ;/alx god ");
+			this.replacements.add("!maul ;/alx maul ");
+			this.replacements.add("!slay ;/alx slay ");
+			this.replacements.add("!sslay ;/alx sslay ");
+			this.replacements.add("!slap ;/alx slap ");
+			this.replacements.add("!ignite ;/alx ignite ");
+			this.replacements.add("!unigniteall ;/alx unigniteall ");
+			this.replacements.add("!playsound ;/alx playsound ");
+			// Jailing Commands
+			this.replacements.add("!jail ;/alx jail ");
+			this.replacements.add("!jailtp ;/alx jailtp ");
+			// Utility Commands
+			this.replacements.add("!ban ;/alx ban ");
+			this.replacements.add("!banip ;/alx banip ");
+			this.replacements.add("!unban ;/alx unban ");
+			this.replacements.add("!kick ;/alx kick ");
+			this.replacements.add("!noclip ;/alx noclip ");
+			this.replacements.add("!spectate ;/alx spectate ");
+			this.replacements.add("!who ;/alx who ");
+			// Chat Commands
+			this.replacements.add("!asay ;/alx asay ");
+			this.replacements.add("!csay ;/alx csay ");
+			this.replacements.add("!psay ;/alx psay ");
+			this.replacements.add("!gimp ;/alx gimp ");
+			this.replacements.add("!mute ;/alx mute ");
+			this.replacements.add("!thetime ;/alx thetime ");
+			this.replacements.add("!tsay ;/alx tsay ");
+			// Voting Commands
+			this.replacements.add("!veto ;/alx veto ");
+			this.replacements.add("!vote ;/alx vote ");
+			this.replacements.add("!voteban ;/alx voteban ");
+			this.replacements.add("!votekick ;/alx votekick ");
+			// User Management Commands
+			this.replacements.add("!addgroup ;/alx addgroup ");
+			this.replacements.add("!adduser ;/alx adduser ");
+			this.replacements.add("!groupallow ;/alx groupallow ");
+			this.replacements.add("!groupdeny ;/alx groupdeny ");
+			this.replacements.add("!removegroup ;/alx removegroup ");
+			this.replacements.add("!removeuser ;/alx removeuser ");
+			this.replacements.add("!renamegroup ;/alx renamegroup ");
+			this.replacements.add("!setgroupcantarget ;/alx setgroupcantarget ");
+			this.replacements.add("!userallow ;/alx userallow ");
+			this.replacements.add("!userdeny ;/alx userdeny ");
+			// Rcon commands
+			this.replacements.add("!cexec ;/alx cexec ");
+			this.replacements.add("!rcon ;/alx rcon ");
 		}
 		this.getConfig().set("replacements", (Object)this.replacements);
 		this.saveConfig();
@@ -90,7 +149,7 @@ public class ALXmain extends JavaPlugin implements Listener {
 				
 				if (args[0].equalsIgnoreCase("hp")) {
 					player.sendMessage("=Currently Unable to be Implemented=");
-					player.sendMessage(":/ sorry");
+					player.sendMessage("Sorry");
 					player.sendMessage("Usage:");
 					player.sendMessage("!hp" + ChatColor.GREEN + "<health>" + ChatColor.GOLD + "[targetplayer]");
 					player.sendMessage("If no player is given, default to self");
