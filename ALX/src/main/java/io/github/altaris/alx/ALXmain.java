@@ -99,17 +99,18 @@ public class ALXmain extends JavaPlugin implements Listener {
 			this.replacements.add("!vote ;/alx vote ");
 			this.replacements.add("!voteban ;/alx voteban ");
 			this.replacements.add("!votekick ;/alx votekick ");
-			// User Management Commands
-			this.replacements.add("!addgroup ;/alx addgroup ");
-			this.replacements.add("!adduser ;/alx adduser ");
-			this.replacements.add("!groupallow ;/alx groupallow ");
-			this.replacements.add("!groupdeny ;/alx groupdeny ");
-			this.replacements.add("!removegroup ;/alx removegroup ");
-			this.replacements.add("!removeuser ;/alx removeuser ");
-			this.replacements.add("!renamegroup ;/alx renamegroup ");
-			this.replacements.add("!setgroupcantarget ;/alx setgroupcantarget ");
-			this.replacements.add("!userallow ;/alx userallow ");
-			this.replacements.add("!userdeny ;/alx userdeny ");
+			// User Management Commands which I'm not removing, re can impliment these at a later date
+			// and have it in the config to be used or not, defaulting to no 
+			// this.replacements.add("!addgroup ;/alx addgroup ");
+			// this.replacements.add("!adduser ;/alx adduser ");
+			// this.replacements.add("!groupallow ;/alx groupallow ");
+			// this.replacements.add("!groupdeny ;/alx groupdeny ");
+			// this.replacements.add("!removegroup ;/alx removegroup ");
+			// this.replacements.add("!removeuser ;/alx removeuser ");
+			// this.replacements.add("!renamegroup ;/alx renamegroup ");
+			// this.replacements.add("!setgroupcantarget ;/alx setgroupcantarget ");
+			//this.replacements.add("!userallow ;/alx userallow ");
+			//this.replacements.add("!userdeny ;/alx userdeny ");
 			// Rcon commands
 			this.replacements.add("!cexec ;/alx cexec ");
 			this.replacements.add("!rcon ;/alx rcon ");
