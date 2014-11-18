@@ -3,7 +3,7 @@ package io.github.altaris.alx;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-
+import java.util.UUID;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
@@ -22,6 +22,8 @@ public class ALXmain extends JavaPlugin implements Listener {
 	
 	Server server = Bukkit.getServer();
 	HashMap<String, Location> returnLoc;
+	HashMap<String, Boolean> tpAccept;
+	HashMap<String, UUID> tpaPlayer;
 	List<String> replacements;
 	
 	public ALXmain() {
@@ -34,6 +36,8 @@ public class ALXmain extends JavaPlugin implements Listener {
 		this.getServer().getPluginManager().registerEvents((Listener)this, (Plugin)this);
 		this.loadConfig();
 		this.returnLoc = new HashMap<String, Location>();
+		this.tpAccept = new HashMap<String, Boolean>();
+		this.tpaPlayer = new HashMap<String, UUID>();
 	}
 	
 	@Override
@@ -49,11 +53,12 @@ public class ALXmain extends JavaPlugin implements Listener {
 			this.replacements.add("!help ;/alx help ");
 			this.replacements.add("!menu ;/alx menu ");
 			// Teleportation Commands
-			this.replacements.add("!goto ;/alx goto ");
-			this.replacements.add("!bring ;/alx bring ");
-			this.replacements.add("!return ;/alx return ");
+			this.replacements.add("!goto ;/alx goto "); //implemented
+			this.replacements.add("!bring ;/alx bring "); //implemented
+			this.replacements.add("!return ;/alx return "); //implemented
 			this.replacements.add("!send ;/alx send ");
-			this.replacements.add("!tpa ;/alx tpa ");
+			this.replacements.add("!tpa ;/alx tpa "); //implemented
+			this.replacements.add("!tpaccept ;/alx tpaccept "); //implemented
 			// "Fun" Commands
 			this.replacements.add("!armor ;alx armor ");
 			this.replacements.add("!blind ;/alx blind ");
@@ -155,6 +160,26 @@ public class ALXmain extends JavaPlugin implements Listener {
 					player.sendMessage("If no player is given, default to self");
 					return false;
 				}
+				
+				if (args[0].equalsIgnoreCase("tpaccept")) {
+					if (tpaPlayer.containsKey(player.getName())) {
+						for (Player playerToTp : Bukkit.getServer().getOnlinePlayers()) {
+							if(playerToTp.getUniqueId().equals(tpaPlayer.get(player))) {
+								Player playerToBeTeleported = Bukkit.getServer().getPlayer(tpaPlayer.get(player));
+								player.sendMessage("Request accepted, commencing teleport.");
+								playerToBeTeleported.sendMessage("Request accepted.");
+								playerToBeTeleported.sendMessage("Teleportation will commence now.");
+								playerToBeTeleported.sendMessage("Don't move.");
+								returnLoc.put(playerToBeTeleported.getName(), playerToBeTeleported.getLocation());
+								playerToBeTeleported.teleport(player);
+							}
+						}
+						player.sendMessage("Unable to find player.");
+						return false;
+					}
+					player.sendMessage("No pending teleport requests.");
+					return true;
+				}
 			}
 			
 			if (length == 2) {
@@ -166,6 +191,7 @@ public class ALXmain extends JavaPlugin implements Listener {
 							player.teleport(playerToGoto);
 							return true;
 						}
+						
 					}
 					
 					player.sendMessage("Player not found.");
@@ -204,6 +230,24 @@ public class ALXmain extends JavaPlugin implements Listener {
 							}
 						}
 					}
+					
+					player.sendMessage("No saved location.");
+					return false;
+				}
+				
+				if (args[0].equalsIgnoreCase("tpa")) {
+					for (Player tpaPlayer : Bukkit.getServer().getOnlinePlayers()) {
+						if(tpaPlayer.getName().equalsIgnoreCase(args[1])) {
+							this.tpaPlayer.put(tpaPlayer.getName(), player.getUniqueId());
+							tpaPlayer.sendMessage(player.getName() + " is requesting teleport.");
+							tpaPlayer.sendMessage("Accept using !tpaccept");
+							player.sendMessage("Teleport request sent.");
+							return true;
+						}
+					}
+					
+					player.sendMessage("Player not found.");
+					return false;
 				}
 			}
 			
