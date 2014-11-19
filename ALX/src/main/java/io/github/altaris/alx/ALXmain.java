@@ -56,7 +56,7 @@ public class ALXmain extends JavaPlugin implements Listener {
 			this.replacements.add("!goto ;/alx goto "); //implemented
 			this.replacements.add("!bring ;/alx bring "); //implemented
 			this.replacements.add("!return ;/alx return "); //implemented
-			this.replacements.add("!send ;/alx send ");
+			this.replacements.add("!send ;/alx send "); //might've implemented
 			this.replacements.add("!tpa ;/alx tpa "); //implemented
 			this.replacements.add("!tpaccept ;/alx tpaccept "); //implemented
 			// "Fun" Commands
@@ -249,6 +249,23 @@ public class ALXmain extends JavaPlugin implements Listener {
 					
 					player.sendMessage("Player not found.");
 					return false;
+				}
+			}
+			
+			if (length == 3) {
+
+				if (args[0].equalsIgnoreCase("send")) {
+					
+					for (Player playerToSend : Bukkit.getServer().getOnlinePlayers()) {
+						if(playerToSend.getName().equalsIgnoreCase(args[1])) {
+							for (Player playerToBeReceived : Bukkit.getServer().getOnlinePlayers()) {
+								if(playerToBeReceived.getName().equalsIgnoreCase(args[2])) {
+									returnLoc.put(playerToSend.getName(), playerToSend.getLocation());
+									playerToSend.teleport(playerToBeReceived);
+								}
+							}
+						}
+					}
 				}
 			}
 			

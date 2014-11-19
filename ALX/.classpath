@@ -32,5 +32,10 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/sanders/eclipse/assets/GUIAPI-1.0.5.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="http://austinv11.github.io/GUIAPIDocs/Version-1.0.5"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
