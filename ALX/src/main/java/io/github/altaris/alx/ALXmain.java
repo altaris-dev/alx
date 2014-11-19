@@ -53,63 +53,63 @@ public class ALXmain extends JavaPlugin implements Listener {
 			// Some of these may have un-needed spaces following them, please review
 			// I'll be organizing the coding for the commands below these at a later date, as well.
 			// Help and Menu Commands
-			this.replacements.add("!help ;/alx help ");
-			this.replacements.add("!menu ;/alx menu ");
-			this.replacements.add("!motd ;/alx motd");
-			this.replacements.add("!rules ;/alx rules");
-			this.replacements.add("!afk ;/alx afk ");
-			this.replacements.add("@ ;/alx @ ");
+			this.replacements.add("!help;/alx help");
+			this.replacements.add("!menu;/alx menu");
+			this.replacements.add("!motd;/alx motd");
+			this.replacements.add("!rules;/alx rules");
+			this.replacements.add("!afk;/alx afk");
+			this.replacements.add("@;/alx @");
 			// The command above shall be for admin chat
 			// Further development shall occur
 			// Inspired by ULX and Essentials
 			
 			// Teleportation Commands
-			this.replacements.add("!goto ;/alx goto "); //implemented
-			this.replacements.add("!bring ;/alx bring "); //implemented
-			this.replacements.add("!return ;/alx return "); //implemented
-			this.replacements.add("!send ;/alx send "); //might've implemented
-			this.replacements.add("!tpa ;/alx tpa "); //implemented
-			this.replacements.add("!tpaccept ;/alx tpaccept "); //implemented
-			this.replacements.add("!home ;/alx home ");
-			this.replacements.add("!sethome ;/alx sethome ");
-			this.replacements.add("!delhome ;/alx delhome ");
-			this.replacements.add("!back ;/alx back ");
-			this.replacements.add("!warp ;/alx warp ");
-			this.replacements.add("!setwarp ;/alx setwarp ");
-			this.replacements.add("!delwarp ;/alx delwarp ");
-			this.replacements.add("!setspawn ;/alx setspawn ");
-			this.replacements.add("!spawn ;/alx spawn ");
+			this.replacements.add("!goto;/alx goto"); //implemented
+			this.replacements.add("!bring;/alx bring"); //implemented
+			this.replacements.add("!return;/alx return"); //implemented
+			this.replacements.add("!send;/alx send"); //might've implemented
+			this.replacements.add("!tpa;/alx tpa"); //implemented
+			this.replacements.add("!tpaccept;/alx tpaccept"); //implemented
+			this.replacements.add("!home;/alx home");
+			this.replacements.add("!sethome;/alx sethome");
+			this.replacements.add("!delhome;/alx delhome");
+			this.replacements.add("!back;/alx back");
+			this.replacements.add("!warp;/alx warp");
+			this.replacements.add("!setwarp;/alx setwarp");
+			this.replacements.add("!delwarp;/alx delwarp");
+			this.replacements.add("!setspawn;/alx setspawn");
+			this.replacements.add("!spawn;/alx spawn");
 			// "Fun" Commands
-			this.replacements.add("!armor ;alx armor ");
-			this.replacements.add("!blind ;/alx blind ");
-			this.replacements.add("!cloak ;/alx cloak ");
-			this.replacements.add("!freeze ;/alx freeze ");
-			this.replacements.add("!strip ;/alx strip ");
+			this.replacements.add("!armor;alx armor");
+			this.replacements.add("!blind;/alx blind");
+			this.replacements.add("!cloak;/alx cloak");
+			this.replacements.add("!freeze;/alx freeze");
+			this.replacements.add("!strip;/alx strip");
 			// Health Related Commands
-			this.replacements.add("!hp ;/alx hp ");
-			this.replacements.add("!heal ;/alx heal ");
-			this.replacements.add("!god ;/alx god ");
-			this.replacements.add("!maul ;/alx maul ");
-			this.replacements.add("!slay ;/alx slay ");
-			this.replacements.add("!sslay ;/alx sslay ");
-			this.replacements.add("!slap ;/alx slap ");
-			this.replacements.add("!ignite ;/alx ignite ");
-			this.replacements.add("!unigniteall ;/alx unigniteall ");
-			this.replacements.add("!smite ;/alx smite ");
-			this.replacements.add("!nuke ;/alx nuke ");
+			this.replacements.add("!hp;/alx hp");
+			this.replacements.add("!heal;/alx heal");
+			this.replacements.add("!god;/alx god");
+			this.replacements.add("!maul;/alx maul");
+			this.replacements.add("!slay;/alx slay");
+			this.replacements.add("!sslay;/alx sslay");
+			this.replacements.add("!slap;/alx slap");
+			this.replacements.add("!ignite;/alx ignite");
+			this.replacements.add("!unigniteall;/alx unigniteall");
+			this.replacements.add("!smite;/alx smite");
+			this.replacements.add("!nuke;/alx nuke");
 			// Jailing Commands
-			this.replacements.add("!jail ;/alx jail ");
-			this.replacements.add("!jailtp ;/alx jailtp ");
+			this.replacements.add("!jail;/alx jail");
+			this.replacements.add("!jailtp;/alx jailtp");
 			// Utility Commands
-			this.replacements.add("!ban ;/alx ban ");
-			this.replacements.add("!banip ;/alx banip ");
-			this.replacements.add("!unban ;/alx unban ");
-			this.replacements.add("!kick ;/alx kick ");
-			this.replacements.add("!kickall ;/alx kickall ");
-			this.replacements.add("!noclip ;/alx noclip ");
-			this.replacements.add("!spectate ;/alx spectate ");
-			this.replacements.add("!who ;/alx who ");
-			this.replacements.add("!seen ;/alx seen ");
+			this.replacements.add("!ban;/alx ban");
+			this.replacements.add("!banip;/alx banip");
+			this.replacements.add("!unban;/alx unban");
+			this.replacements.add("!kick;/alx kick");
+			this.replacements.add("!kickall;/alx kickall");
+			this.replacements.add("!noclip;/alx noclip");
+			this.replacements.add("!spectate;/alx spectate");
+			this.replacements.add("!who;/alx who");
+			this.replacements.add("!seen;/alx seen");
 			this.replacements.add("!clearinventory ;/alx clearinventory "); // Let's make it also recognize !ci
 			this.replacements.add("!invsee ;/alx invsee ");
 			this.replacements.add("!spy ;/alx spy "); //Social Spy
@@ -199,6 +199,12 @@ public class ALXmain extends JavaPlugin implements Listener {
 			
 			//Arg 0 = first word entered after command, Arg 1 = second word, etc.
 			int length = args.length;
+			
+			if (length == 0) {
+				PluginDescriptionFile pdfFile = this.getDescription();
+				player.sendMessage(pdfFile.getName() + " Version " + pdfFile.getVersion() + ". Use !help for help.");
+				return true;
+			}
 			
 			if (length == 1) {
 				if (args[0].equalsIgnoreCase("help")) {
@@ -332,9 +338,7 @@ public class ALXmain extends JavaPlugin implements Listener {
 				}
 			}
 			
-			PluginDescriptionFile pdfFile = this.getDescription();
-			player.sendMessage(pdfFile.getName() + "Version" + pdfFile.getVersion() + ". Use !help for help.");
-			return true;
+			return false;
 		}
 		
 		return false;
