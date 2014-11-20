@@ -49,43 +49,80 @@ public class ALXmain extends JavaPlugin implements Listener {
 		this.getConfig().options().copyDefaults(true);
 		this.replacements = (List<String>)this.getConfig().getStringList("replacements");
 		if (this.replacements.isEmpty()) {
+			// For all implemented commands, please specify so.
+			// Some of these may have un-needed spaces following them, please review
+			// I'll be organizing the coding for the commands below these at a later date, as well.
 			// Help and Menu Commands
-			this.replacements.add("!help ;/alx help ");
-			this.replacements.add("!menu ;/alx menu ");
+			this.replacements.add("!help;/alx help");
+			this.replacements.add("!menu;/alx menu");
+			this.replacements.add("!motd;/alx motd");
+			this.replacements.add("!rules;/alx rules");
+			this.replacements.add("!afk;/alx afk");
+			this.replacements.add("@;/alx @");
+			// The command above shall be for admin chat
+			// Further development shall occur
+			// Inspired by ULX and Essentials
+			
 			// Teleportation Commands
-			this.replacements.add("!goto ;/alx goto "); //implemented
-			this.replacements.add("!bring ;/alx bring "); //implemented
-			this.replacements.add("!return ;/alx return "); //implemented
-			this.replacements.add("!send ;/alx send "); //might've implemented
-			this.replacements.add("!tpa ;/alx tpa "); //implemented
-			this.replacements.add("!tpaccept ;/alx tpaccept "); //implemented
+			this.replacements.add("!goto;/alx goto"); //implemented
+			this.replacements.add("!bring;/alx bring"); //implemented
+			this.replacements.add("!return;/alx return"); //implemented
+			this.replacements.add("!send;/alx send"); //might've implemented
+			this.replacements.add("!tpa;/alx tpa"); //implemented
+			this.replacements.add("!tpaccept;/alx tpaccept"); //implemented
+			this.replacements.add("!home;/alx home");
+			this.replacements.add("!sethome;/alx sethome");
+			this.replacements.add("!delhome;/alx delhome");
+			this.replacements.add("!back;/alx back");
+			this.replacements.add("!warp;/alx warp");
+			this.replacements.add("!setwarp;/alx setwarp");
+			this.replacements.add("!delwarp;/alx delwarp");
+			this.replacements.add("!setspawn;/alx setspawn");
+			this.replacements.add("!spawn;/alx spawn");
 			// "Fun" Commands
-			this.replacements.add("!armor ;alx armor ");
-			this.replacements.add("!blind ;/alx blind ");
-			this.replacements.add("!cloak ;/alx cloak ");
-			this.replacements.add("!freeze ;/alx freeze ");
-			this.replacements.add("!strip ;/alx strip ");
+			this.replacements.add("!armor;alx armor");
+			this.replacements.add("!blind;/alx blind");
+			this.replacements.add("!cloak;/alx cloak");
+			this.replacements.add("!freeze;/alx freeze");
+			this.replacements.add("!strip;/alx strip");
 			// Health Related Commands
-			this.replacements.add("!hp ;/alx hp ");
-			this.replacements.add("!god ;/alx god ");
-			this.replacements.add("!maul ;/alx maul ");
-			this.replacements.add("!slay ;/alx slay ");
-			this.replacements.add("!sslay ;/alx sslay ");
-			this.replacements.add("!slap ;/alx slap ");
-			this.replacements.add("!ignite ;/alx ignite ");
-			this.replacements.add("!unigniteall ;/alx unigniteall ");
-			this.replacements.add("!playsound ;/alx playsound ");
+			this.replacements.add("!hp;/alx hp");
+			this.replacements.add("!heal;/alx heal");
+			this.replacements.add("!god;/alx god");
+			this.replacements.add("!maul;/alx maul");
+			this.replacements.add("!slay;/alx slay");
+			this.replacements.add("!sslay;/alx sslay");
+			this.replacements.add("!slap;/alx slap");
+			this.replacements.add("!ignite;/alx ignite");
+			this.replacements.add("!unigniteall;/alx unigniteall");
+			this.replacements.add("!smite;/alx smite");
+			this.replacements.add("!nuke;/alx nuke");
 			// Jailing Commands
-			this.replacements.add("!jail ;/alx jail ");
-			this.replacements.add("!jailtp ;/alx jailtp ");
+			this.replacements.add("!jail;/alx jail");
+			this.replacements.add("!jailtp;/alx jailtp");
 			// Utility Commands
-			this.replacements.add("!ban ;/alx ban ");
-			this.replacements.add("!banip ;/alx banip ");
-			this.replacements.add("!unban ;/alx unban ");
-			this.replacements.add("!kick ;/alx kick ");
-			this.replacements.add("!noclip ;/alx noclip ");
-			this.replacements.add("!spectate ;/alx spectate ");
-			this.replacements.add("!who ;/alx who ");
+			this.replacements.add("!ban;/alx ban");
+			this.replacements.add("!banip;/alx banip");
+			this.replacements.add("!unban;/alx unban");
+			this.replacements.add("!kick;/alx kick");
+			this.replacements.add("!kickall;/alx kickall");
+			this.replacements.add("!noclip;/alx noclip");
+			this.replacements.add("!spectate;/alx spectate");
+			this.replacements.add("!who;/alx who");
+			this.replacements.add("!seen;/alx seen");
+			this.replacements.add("!clearinventory ;/alx clearinventory "); // Let's make it also recognize !ci
+			this.replacements.add("!invsee ;/alx invsee ");
+			this.replacements.add("!spy ;/alx spy "); //Social Spy
+			this.replacements.add("!gamemode ;/alx gamemode ");
+			this.replacements.add("!give ;/alx give ");
+			this.replacements.add("!item ;/alx item ");
+			this.replacements.add("!unlimited ;/alx unlimited ");
+			this.replacements.add("!getpos ;/alx getpos ");
+			this.replacements.add("!setjail ;/alx setjail ");
+			this.replacements.add("!deljail ;/alx deljail ");
+			this.replacements.add("!sudo ;/alx sudo ");
+			this.replacements.add("!spawnmob ;/alx spawnmob ");
+			this.replacements.add("!togglejail ;/alx togglejail ");
 			// Chat Commands
 			this.replacements.add("!asay ;/alx asay ");
 			this.replacements.add("!csay ;/alx csay ");
@@ -99,8 +136,7 @@ public class ALXmain extends JavaPlugin implements Listener {
 			this.replacements.add("!vote ;/alx vote ");
 			this.replacements.add("!voteban ;/alx voteban ");
 			this.replacements.add("!votekick ;/alx votekick ");
-			// User Management Commands which I'm not removing, re can impliment these at a later date
-			// and have it in the config to be used or not, defaulting to no 
+			// User Management Commands, implementing later
 			// this.replacements.add("!addgroup ;/alx addgroup ");
 			// this.replacements.add("!adduser ;/alx adduser ");
 			// this.replacements.add("!groupallow ;/alx groupallow ");
@@ -109,11 +145,38 @@ public class ALXmain extends JavaPlugin implements Listener {
 			// this.replacements.add("!removeuser ;/alx removeuser ");
 			// this.replacements.add("!renamegroup ;/alx renamegroup ");
 			// this.replacements.add("!setgroupcantarget ;/alx setgroupcantarget ");
-			//this.replacements.add("!userallow ;/alx userallow ");
-			//this.replacements.add("!userdeny ;/alx userdeny ");
+			// this.replacements.add("!userallow ;/alx userallow ");
+			// this.replacements.add("!userdeny ;/alx userdeny ");
 			// Rcon commands
 			this.replacements.add("!cexec ;/alx cexec ");
 			this.replacements.add("!rcon ;/alx rcon ");
+			// Roleplay Commands
+			this.replacements.add("!enchant ;/alx enchant ");
+			this.replacements.add("!exp ;/alx exp ");
+			this.replacements.add("!feed ;/alx feed ");
+			this.replacements.add("!hat ;/alx hat ");
+			this.replacements.add("!break ;/alx break ");
+			this.replacements.add("!kit ;/alx kit ");
+			this.replacements.add("!repair ;/alx repair ");
+			this.replacements.add("!repairall ;/alx repairall ");
+			this.replacements.add("!me ;/alx me ");
+			this.replacements.add("!msg ;/alx msg "); // Possibly replace or work with psay?
+			this.replacements.add("!near ;/alx near ");
+			this.replacements.add("!nick ;/alx nick ");
+			this.replacements.add("!playsound ;/alx playsound "); // Not sure if possible
+			// Weather and Time
+			this.replacements.add("!time ;/alx time ");
+			this.replacements.add("!thunder ;/alx thunder ");
+			this.replacements.add("!weather ;/alx weather ");
+			this.replacements.add("!lighting ;/alx lightning");
+			// Economy, implementing later
+			// this.replacements.add("!balance ;/alx balance ");
+			// this.replacements.add("!balancetop '/alx balancetop ");
+			// this.replacements.add("!eco ;/alx eco ");
+			// this.replacements.add("!pay ;/alx pay ");
+			// this.replacements.add("!sell ;/alx sell ");
+			// this.replacements.add("!setworth ;/alx setworth ");
+			// this.replacements.add("!worth ;/alx worth ");
 		}
 		this.getConfig().set("replacements", (Object)this.replacements);
 		this.saveConfig();
@@ -136,6 +199,12 @@ public class ALXmain extends JavaPlugin implements Listener {
 			
 			//Arg 0 = first word entered after command, Arg 1 = second word, etc.
 			int length = args.length;
+			
+			if (length == 0) {
+				PluginDescriptionFile pdfFile = this.getDescription();
+				player.sendMessage(pdfFile.getName() + " Version " + pdfFile.getVersion() + ". Use !help for help.");
+				return true;
+			}
 			
 			if (length == 1) {
 				if (args[0].equalsIgnoreCase("help")) {
@@ -269,9 +338,7 @@ public class ALXmain extends JavaPlugin implements Listener {
 				}
 			}
 			
-			PluginDescriptionFile pdfFile = this.getDescription();
-			player.sendMessage(pdfFile.getName() + "Version" + pdfFile.getVersion() + ". Use !help for help.");
-			return true;
+			return false;
 		}
 		
 		return false;
