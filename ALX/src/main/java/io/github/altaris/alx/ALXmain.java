@@ -110,32 +110,32 @@ public class ALXmain extends JavaPlugin implements Listener {
 			this.replacements.add("!spectate;/alx spectate");
 			this.replacements.add("!who;/alx who");
 			this.replacements.add("!seen;/alx seen");
-			this.replacements.add("!clearinventory ;/alx clearinventory "); // Let's make it also recognize !ci
-			this.replacements.add("!invsee ;/alx invsee ");
-			this.replacements.add("!spy ;/alx spy "); //Social Spy
-			this.replacements.add("!gamemode ;/alx gamemode ");
-			this.replacements.add("!give ;/alx give ");
-			this.replacements.add("!item ;/alx item ");
-			this.replacements.add("!unlimited ;/alx unlimited ");
-			this.replacements.add("!getpos ;/alx getpos ");
-			this.replacements.add("!setjail ;/alx setjail ");
-			this.replacements.add("!deljail ;/alx deljail ");
-			this.replacements.add("!sudo ;/alx sudo ");
-			this.replacements.add("!spawnmob ;/alx spawnmob ");
-			this.replacements.add("!togglejail ;/alx togglejail ");
+			this.replacements.add("!clearinventory;/alx clearinventory"); // Let's make it also recognize !ci
+			this.replacements.add("!invsee;/alx invsee");
+			this.replacements.add("!spy;/alx spy"); //Social Spy
+			this.replacements.add("!gamemode;/alx gamemode");
+			this.replacements.add("!give;/alx give");
+			this.replacements.add("!item;/alx item");
+			this.replacements.add("!unlimited;/alx unlimited");
+			this.replacements.add("!getpos;/alx getpos");
+			this.replacements.add("!setjail;/alx setjail");
+			this.replacements.add("!deljail;/alx deljail");
+			this.replacements.add("!sudo;/alx sudo");
+			this.replacements.add("!spawnmob;/alx spawnmob");
+			this.replacements.add("!togglejail;/alx togglejail");
 			// Chat Commands
-			this.replacements.add("!asay ;/alx asay ");
-			this.replacements.add("!csay ;/alx csay ");
-			this.replacements.add("!psay ;/alx psay ");
-			this.replacements.add("!gimp ;/alx gimp ");
-			this.replacements.add("!mute ;/alx mute ");
-			this.replacements.add("!thetime ;/alx thetime ");
-			this.replacements.add("!tsay ;/alx tsay ");
+			this.replacements.add("!asay;/alx asay");
+			this.replacements.add("!csay;/alx csay");
+			this.replacements.add("!psay;/alx psay");
+			this.replacements.add("!gimp;/alx gimp");
+			this.replacements.add("!mute;/alx mute");
+			this.replacements.add("!thetime;/alx thetime");
+			this.replacements.add("!tsay;/alx tsay");
 			// Voting Commands
-			this.replacements.add("!veto ;/alx veto ");
-			this.replacements.add("!vote ;/alx vote ");
-			this.replacements.add("!voteban ;/alx voteban ");
-			this.replacements.add("!votekick ;/alx votekick ");
+			this.replacements.add("!veto;/alx veto");
+			this.replacements.add("!vote;/alx vote");
+			this.replacements.add("!voteban;/alx voteban");
+			this.replacements.add("!votekick;/alx votekick");
 			// User Management Commands, implementing later
 			// this.replacements.add("!addgroup ;/alx addgroup ");
 			// this.replacements.add("!adduser ;/alx adduser ");
