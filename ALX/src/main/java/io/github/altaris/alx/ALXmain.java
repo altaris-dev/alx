@@ -21,7 +21,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class ALXmain extends JavaPlugin implements Listener {
 	
 	Server server = Bukkit.getServer();
-	HashMap<String, Location> returnLoc;
+	HashMap<UUID, Location> returnLoc;
 	HashMap<String, Boolean> tpAccept;
 	HashMap<String, UUID> tpaPlayer;
 	List<String> replacements;
@@ -35,7 +35,7 @@ public class ALXmain extends JavaPlugin implements Listener {
 	public void onEnable() {
 		this.getServer().getPluginManager().registerEvents((Listener)this, (Plugin)this);
 		this.loadConfig();
-		this.returnLoc = new HashMap<String, Location>();
+		this.returnLoc = new HashMap<UUID, Location>();
 		this.tpAccept = new HashMap<String, Boolean>();
 		this.tpaPlayer = new HashMap<String, UUID>();
 	}
@@ -213,8 +213,8 @@ public class ALXmain extends JavaPlugin implements Listener {
 				}
 				
 				if (args[0].equalsIgnoreCase("return")) {
-					if (returnLoc.containsKey(player.getName())) {
-						player.teleport(returnLoc.get(player.getName()));
+					if (returnLoc.containsKey(player.getUniqueId())) {
+						player.teleport(returnLoc.get(player.getUniqueId()));
 						return true;
 					}
 					
@@ -240,7 +240,7 @@ public class ALXmain extends JavaPlugin implements Listener {
 								playerToBeTeleported.sendMessage("Request accepted.");
 								playerToBeTeleported.sendMessage("Teleportation will commence now.");
 								playerToBeTeleported.sendMessage("Don't move.");
-								returnLoc.put(playerToBeTeleported.getName(), playerToBeTeleported.getLocation());
+								returnLoc.put(playerToBeTeleported.getUniqueId(), playerToBeTeleported.getLocation());
 								playerToBeTeleported.teleport(player);
 							}
 						}
@@ -257,7 +257,7 @@ public class ALXmain extends JavaPlugin implements Listener {
 					
 					for (Player playerToGoto : Bukkit.getServer().getOnlinePlayers()) {
 						if(playerToGoto.getName().equalsIgnoreCase(args[1])) {
-							returnLoc.put(player.getName(), player.getLocation());
+							returnLoc.put(player.getUniqueId(), player.getLocation());
 							player.teleport(playerToGoto);
 							return true;
 						}
@@ -272,7 +272,7 @@ public class ALXmain extends JavaPlugin implements Listener {
 					
 					for (Player playerToBring : Bukkit.getServer().getOnlinePlayers()) {
 						if(playerToBring.getName().equalsIgnoreCase(args[1])) {
-							returnLoc.put(playerToBring.getName(), playerToBring.getLocation());
+							returnLoc.put(playerToBring.getUniqueId(), playerToBring.getLocation());
 							playerToBring.teleport(player);
 							return true;
 						}
@@ -294,7 +294,7 @@ public class ALXmain extends JavaPlugin implements Listener {
 				if (args[0].equalsIgnoreCase("return")) {
 					for (Player playerToReturn : Bukkit.getServer().getOnlinePlayers()) {
 						if(playerToReturn.getName().equalsIgnoreCase(args[1])) {
-							if (returnLoc.containsKey(playerToReturn.getName())) {
+							if (returnLoc.containsKey(playerToReturn.getUniqueId())) {
 								playerToReturn.teleport(returnLoc.get(playerToReturn.getName()));
 								return true;
 							}
@@ -329,7 +329,7 @@ public class ALXmain extends JavaPlugin implements Listener {
 						if(playerToSend.getName().equalsIgnoreCase(args[1])) {
 							for (Player playerToBeReceived : Bukkit.getServer().getOnlinePlayers()) {
 								if(playerToBeReceived.getName().equalsIgnoreCase(args[2])) {
-									returnLoc.put(playerToSend.getName(), playerToSend.getLocation());
+									returnLoc.put(playerToSend.getUniqueId(), playerToSend.getLocation());
 									playerToSend.teleport(playerToBeReceived);
 								}
 							}
