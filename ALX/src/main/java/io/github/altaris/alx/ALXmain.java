@@ -137,46 +137,46 @@ public class ALXmain extends JavaPlugin implements Listener {
 			this.replacements.add("!voteban;/alx voteban");
 			this.replacements.add("!votekick;/alx votekick");
 			// User Management Commands, implementing later
-			// this.replacements.add("!addgroup ;/alx addgroup ");
-			// this.replacements.add("!adduser ;/alx adduser ");
-			// this.replacements.add("!groupallow ;/alx groupallow ");
-			// this.replacements.add("!groupdeny ;/alx groupdeny ");
-			// this.replacements.add("!removegroup ;/alx removegroup ");
-			// this.replacements.add("!removeuser ;/alx removeuser ");
-			// this.replacements.add("!renamegroup ;/alx renamegroup ");
-			// this.replacements.add("!setgroupcantarget ;/alx setgroupcantarget ");
-			// this.replacements.add("!userallow ;/alx userallow ");
-			// this.replacements.add("!userdeny ;/alx userdeny ");
+			// this.replacements.add("!addgroup;/alx addgroup");
+			// this.replacements.add("!adduser;/alx adduser");
+			// this.replacements.add("!groupallow;/alx groupallow");
+			// this.replacements.add("!groupdeny;/alx groupdeny");
+			// this.replacements.add("!removegroup;/alx removegroup");
+			// this.replacements.add("!removeuser;/alx removeuser");
+			// this.replacements.add("!renamegroup;/alx renamegroup");
+			// this.replacements.add("!setgroupcantarget;/alx setgroupcantarget");
+			// this.replacements.add("!userallow;/alx userallow");
+			// this.replacements.add("!userdeny;/alx userdeny");
 			// Rcon commands
-			this.replacements.add("!cexec ;/alx cexec ");
-			this.replacements.add("!rcon ;/alx rcon ");
+			this.replacements.add("!cexec;/alx cexec");
+			this.replacements.add("!rcon;/alx rcon");
 			// Roleplay Commands
-			this.replacements.add("!enchant ;/alx enchant ");
-			this.replacements.add("!exp ;/alx exp ");
-			this.replacements.add("!feed ;/alx feed ");
-			this.replacements.add("!hat ;/alx hat ");
-			this.replacements.add("!break ;/alx break ");
-			this.replacements.add("!kit ;/alx kit ");
-			this.replacements.add("!repair ;/alx repair ");
-			this.replacements.add("!repairall ;/alx repairall ");
-			this.replacements.add("!me ;/alx me ");
-			this.replacements.add("!msg ;/alx msg "); // Possibly replace or work with psay?
-			this.replacements.add("!near ;/alx near ");
-			this.replacements.add("!nick ;/alx nick ");
-			this.replacements.add("!playsound ;/alx playsound "); // Not sure if possible
+			this.replacements.add("!enchant;/alx enchant");
+			this.replacements.add("!exp;/alx exp");
+			this.replacements.add("!feed;/alx feed");
+			this.replacements.add("!hat;/alx hat");
+			this.replacements.add("!break;/alx break");
+			this.replacements.add("!kit;/alx kit");
+			this.replacements.add("!repair;/alx repair");
+			this.replacements.add("!repairall;/alx repairall");
+			this.replacements.add("!me;/alx me");
+			this.replacements.add("!msg;/alx msg"); // Possibly replace or work with psay?
+			this.replacements.add("!near;/alx near");
+			this.replacements.add("!nick;/alx nick");
+			this.replacements.add("!playsound;/alx playsound"); // Not sure if possible
 			// Weather and Time
 			this.replacements.add("!time ;/alx time ");
-			this.replacements.add("!thunder ;/alx thunder ");
-			this.replacements.add("!weather ;/alx weather ");
-			this.replacements.add("!lighting ;/alx lightning");
+			this.replacements.add("!thunder;/alx thunder");
+			this.replacements.add("!weather;/alx weather");
+			this.replacements.add("!lighting;/alx lightning");
 			// Economy, implementing later
-			// this.replacements.add("!balance ;/alx balance ");
-			// this.replacements.add("!balancetop '/alx balancetop ");
-			// this.replacements.add("!eco ;/alx eco ");
-			// this.replacements.add("!pay ;/alx pay ");
-			// this.replacements.add("!sell ;/alx sell ");
-			// this.replacements.add("!setworth ;/alx setworth ");
-			// this.replacements.add("!worth ;/alx worth ");
+			// this.replacements.add("!balance;/alx balance");
+			// this.replacements.add("!balancetop'/alx balancetop");
+			// this.replacements.add("!eco;/alx eco");
+			// this.replacements.add("!pay;/alx pay");
+			// this.replacements.add("!sell;/alx sell");
+			// this.replacements.add("!setworth;/alx setworth");
+			// this.replacements.add("!worth;/alx worth");
 		}
 		this.getConfig().set("replacements", (Object)this.replacements);
 		this.saveConfig();
